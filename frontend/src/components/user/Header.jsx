@@ -17,7 +17,7 @@ const moveback=()=>{
         <div className="flex items-center cursor-pointer" onClick={moveback}>
           <img src={logo} alt="Logo" className="h-8 mr-2" />
          
-          <h1  className="text-white font-semibold text-lg" >Charity Campaign</h1>
+          <h1  className="text-white font-semibold text-lg" >HelpBridge</h1>
           
         </div>
        
