@@ -23,8 +23,8 @@ const OtpPopup = ({ otp,formData, onClose }) => {
     if (isMatched) {
       setIsOtpMatched(true);
       try {
-        const response = await axios.post('http://localhost:4000/SignUpForm', formData);
-        alert("kfdsfkdv");
+        const response = await axios.post(`${REACT_APP_API_URL}/auth/SignUpForm`, formData);
+        
        
       } catch (error) {
         if (error.response && error.response.data) {

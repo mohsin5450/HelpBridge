@@ -37,7 +37,7 @@ const LoginForm = () => {
       setFormData({ email: '', password: '' });
       setErrors({});
       try {
-        const response = await axios.post('http://localhost:4000/login', formData)
+        const response = await axios.post(`${REACT_APP_API_URL}/auth/login`, formData)
 
         if(!response.data[0].username){
 alert("Account not exit")
@@ -60,7 +60,7 @@ alert("Account not exit")
   };
   const handleClick = (username,id) => {
     console.log(id);
-    navigate('/registration', { state: { name: username, id:id} });
+    navigate('/userSelection', { state: { name: username, id:id} });
   };
   return (
     <div className="bg-gray-200 min-h-screen flex flex-col">

@@ -104,7 +104,7 @@ const RegistrationForm = () => {
       formData.website
     ) {
       try {
-        const response = await axios.post('http://localhost:4000/register', formData);
+        const response = await axios.post(`${REACT_APP_API_URL}/organization/register`, formData);
         navigate('/orgHome', { state: { name: username, id: id } });
       } catch (error) {
         console.error(error);

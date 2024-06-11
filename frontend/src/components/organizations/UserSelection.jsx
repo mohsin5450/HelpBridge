@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import axios from "axios";
 import { useNavigate,useLocation,Link } from 'react-router-dom';
-const Registration = ({ onRegistration }) => {
+const userSelection = () => {
     const navigate = useNavigate();
     const location = useLocation();
   
@@ -13,10 +13,10 @@ const Registration = ({ onRegistration }) => {
   //  alert(userid);
    try {
     
-     const response = await axios.post('http://localhost:4000/getid', {userid});
+     const response = await axios.post(`${REACT_APP_API_URL}/organization/getid`, {userid});
      if(response.data.length>0)
      {
-console.log(response.data[0].org_name);
+console.log(response.data[0].org_name);Registration
        navigate('/orgHome',{ state: { id: response.data[0].id, name: response.data[0].org_name } });
      }
      else{
@@ -56,4 +56,4 @@ console.log(response.data[0].org_name);
   )
 }
 
-export default Registration
+export default userSelection

@@ -8,7 +8,7 @@ function LatestCampaigns() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/getposts");
+        const response = await axios.get(`${REACT_APP_API_URL}/posts/getposts`);
         console.log(response.data);
         setPosts(response.data);
       } catch (error) {
@@ -32,7 +32,7 @@ function LatestCampaigns() {
             className="bg-white shadow-lg rounded-lg p-6 flex flex-col justify-between"
           >
             <img
-              src={`http://localhost:4000/images/`+campaign.picture}
+              src={`${REACT_APP_API_URL}/images/`+campaign.picture}
               alt="Campaign"
               className="w-full h-40 object-cover mb-4"
             />

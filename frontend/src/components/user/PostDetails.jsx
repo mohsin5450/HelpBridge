@@ -17,7 +17,7 @@ console.log(id);
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/getposts',{ params: { id } });
+        const response = await axios.get('http://localhost:4000/posts/getposts',{ params: { id } });
       //  console.log(response.data);
         setPost(response.data);
       } catch (error) {
@@ -55,7 +55,7 @@ console.log(id);
 
       try {
         
-        const response = await axios.put('http://localhost:4000/donateMoney',money);
+        const response = await axios.put(`${REACT_APP_API_URL}/posts/donateMoney`,money);
         money.money="";
         setShowOtpPopup(true);
       //  consolsue.log(response.data);

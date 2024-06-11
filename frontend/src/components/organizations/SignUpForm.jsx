@@ -51,7 +51,7 @@ const SignUpForm = () => {
           const data = { email: formData.email, otp: otp };
           setShowOtpPopup(true);
           const response = await axios.post(
-            "http://localhost:4000/sendmail",
+            `${REACT_APP_API_URL}/email/sendmail`,
             data
           );
         }
@@ -103,7 +103,7 @@ const SignUpForm = () => {
     } else {
       try {
         const response = await axios.post(
-          "http://localhost:4000/SignUpForm",
+          `${REACT_APP_API_URL}/auth/SignUpForm`,
           formData
         );
         navigate("/login");

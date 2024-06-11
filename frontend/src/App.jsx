@@ -3,7 +3,7 @@ import SignUpForm from "./components/organizations/SignUpForm";
 import LoginForm from "./components/organizations/LoginForm"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import RegistrationForm from "./components/organizations/RegistrationForm";
-import Registration from "./components/organizations/Registration";
+import userSelection  from "./components/organizations/userSelection ";
 import Profile from "./components/organizations/Profile";
 import CreatePost from "./components/organizations/CreatePost";
 import OrgHome from "./components/organizations/OrgHome";
@@ -35,7 +35,7 @@ function App() {
         <Route path="/login" element={<LoginForm/>} />
         <Route path="/SignUpForm" element={<SignUpForm/>} />
         <Route path="/donor" element={<App_user/>} />
-        <Route path="/registration" element={<Registration />} />
+        <Route path="/userSelection" element={<userSelection  />} />
         <Route path="/RegistrationForm" element={<RegistrationForm/>} />
         <Route path="/orgHome" element={<OrgHome/>} />
         <Route path="/createPost" element={<CreatePost/>} />

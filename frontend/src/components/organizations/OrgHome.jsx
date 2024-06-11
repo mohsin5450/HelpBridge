@@ -14,7 +14,7 @@ const OrgHome = () => {
       const fetchData = async () => {
         
         try {
-          const response = await axios.get("http://localhost:4000/getpost", { params: { orgid } });
+          const response = await axios.get(`${REACT_APP_API_URL}/posts/getpost`, { params: { orgid } });
           console.log(response.data);
           setdata(response.data);
         } catch (error) {

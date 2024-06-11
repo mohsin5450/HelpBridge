@@ -44,7 +44,7 @@ formData.amountCollected)
     // TODO: Perform submission logic or API call with the form data
     try {
     alert(formData.id);
-        const response = await axios.post('http://localhost:4000/createpost', formdata)
+        const response = await axios.post(`${REACT_APP_API_URL}/posts/createpost`, formdata)
  navigate("/orgHome",{ state: { id: orgId, name: username } });
       } catch (error) {
         console.error(error);
